@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#05010b">
+    <title>First Light / Last Light — Legendary Disco</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="stage">
+      <canvas
+        id="light-field"
+        aria-label="A responsive field of mirrored laser beams and 360 light points expanding from and returning to a central seed."
+      >
+        First Light / Last Light is an animated generative light field.
+      </canvas>
+
+      <div class="shade" aria-hidden="true"></div>
+
+      <header class="title-block">
+        <p class="eyebrow">Legendary Disco presents</p>
+        <h1>First Light <span aria-hidden="true">/</span> Last Light</h1>
+        <p id="phase-copy" class="phase-copy">Before the first beat</p>
+      </header>
+
+      <section class="console" aria-label="Light field controls">
+        <div class="button-row">
+          <button id="motion-toggle" type="button" aria-pressed="true">
+            Pause motion
+          </button>
+          <button id="sound-toggle" type="button" aria-pressed="false">
+            Sound: off
+          </button>
+          <button id="pulse-button" type="button">Send a pulse</button>
+          <button id="return-button" type="button">Return</button>
+        </div>
+
+        <div class="sliders">
+          <label for="tempo">
+            <span>Tempo</span>
+            <output id="tempo-value" for="tempo">72 BPM</output>
+          </label>
+          <input id="tempo" type="range" min="36" max="144" value="72" step="1">
+
+          <label for="mirrors">
+            <span>Mirrors</span>
+            <output id="mirrors-value" for="mirrors">6</output>
+          </label>
+          <input id="mirrors" type="range" min="3" max="12" value="6" step="1">
+        </div>
+
+        <p id="status" class="status" aria-live="polite">
+          Move through the field to bend the light. Space pauses. R returns.
+        </p>
+      </section>
+
+      <details class="about">
+        <summary>What am I looking at?</summary>
+        <p>
+          A deterministic light toy: one seed becomes many moving relations,
+          folds inward, and returns. It is generative art, not a physical model.
+        </p>
+      </details>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

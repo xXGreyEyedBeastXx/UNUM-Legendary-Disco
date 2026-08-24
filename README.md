@@ -29,9 +29,29 @@ A demo may show an effect without publishing every mechanism that produced it.
 
 ## Current state
 
-The disco is just opening.
+The disco is open.
 
-For now, the goal is intentionally small: establish a safe public door, then build real toys one at a time rather than filling an empty repository with speculative architecture.
+The first instrument is **[First Light / Last Light](toys/first-last-light/)**:
+a deterministic, interactive laser-field toy that expands from a seed, dances,
+folds inward, and begins again. Motion can be paused, sound is opt-in, and the
+experience requires no external services or private project context.
+
+Run it from this repository with:
+
+```powershell
+python -m http.server 8080
+```
+
+Then open:
+
+```text
+http://localhost:8080/toys/first-last-light/
+```
+
+The continuing goal remains intentionally small: build real toys one at a time
+rather than filling the repository with speculative architecture.
+
+See [PROVENANCE.md](PROVENANCE.md) for the public crossing and declared losses.
 
 ## Participation
 

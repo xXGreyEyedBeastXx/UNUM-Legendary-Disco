@@ -1,0 +1,10 @@
+{
+  "name": "legendary-disco",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bounded public toys and experiential projections.",
+  "scripts": {
+    "check": "node --check toys/first-last-light/app.js",
+    "test": "node tests/first-last-light-smoke.mjs"
+  }
+}
